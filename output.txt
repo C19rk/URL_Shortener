@@ -1,0 +1,58 @@
+Folder PATH listing
+Volume serial number is 5ED4-57F2
+C:.
+|   docker-compose.yml
+|   output.txt
+|   
++---backend
+|   |   Dockerfile
+|   |   package-lock.json
+|   |   package.json
+|   |   server.js
+|   |   
+|   \---routes
+|           shortener.js
+|           
++---frontend
+|   |   .gitignore
+|   |   Dockerfile
+|   |   eslint.config.js
+|   |   index.html
+|   |   package-lock.json
+|   |   package.json
+|   |   README.md
+|   |   vite.config.js
+|   |   
+|   +---public
+|   |       url_shortener_favicon.png
+|   |       vite.svg
+|   |       
+|   \---src
+|       |   App.css
+|       |   App.jsx
+|       |   index.css
+|       |   main.jsx
+|       |   
+|       +---assets
+|       |       react.svg
+|       |       
+|       +---components
+|       |   \---URLShortener
+|       |           InputSection.jsx
+|       |           UrlItem.jsx
+|       |           UrlList.jsx
+|       |           
+|       +---context
+|       |       UrlContext.jsx
+|       |       
+|       +---hooks
+|       |       useUrl.js
+|       |       
+|       +---pages
+|       |       UrlShortener.jsx
+|       |       
+|       \---styles
+|               InputSection.css
+|               UrlItem.css
+|               UrlList.css
+|               UrlShortener.css

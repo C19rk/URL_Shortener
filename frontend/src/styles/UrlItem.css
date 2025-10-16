@@ -1,0 +1,26 @@
+.url-item-content p {
+  margin: 0;
+  margin-right: 120px;
+  word-break: break-word; /* allows long text to wrap */
+  overflow-wrap: anywhere; /* extreme URLs also wrap */
+}
+
+.url-item-content a {
+  color: #4ea1ff; /* optional: highlight shortened URL */
+  font-weight: bolder;
+  text-decoration: underline;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.original-text {
+  color: #6c6c6c;
+}
+
+.original-text span {
+  color: #007059;
+}
+
+.short-text {
+  color: #ffffff;
+}

@@ -1,0 +1,157 @@
+.url-list-container {
+  margin-top: 20px;
+  max-height: 60vh;
+  width: 200%;
+  overflow-y: auto;
+  padding-right: 8px;
+  scroll-behavior: smooth;
+  position: relative;
+  color: #fff;
+}
+
+/* Bottom page fade overlay */
+body::after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 21px; /* adjust for fade height */
+  pointer-events: none; /* so it doesn't block clicks */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    #1e1e1e
+  ); /* fade to black */
+  z-index: 1000; /* put shadow on highest layer */
+}
+
+/* Optional: make scrollbar look nicer */
+.url-list-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.url-list-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 8px;
+}
+
+.url-list-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.url-list-container h2 {
+  position: sticky;
+  top: 0;
+  background-color: #1e1e1e;
+  padding: 10px 0;
+  z-index: 10;
+  margin: 0 0 10px 0;
+  /* Add shadow/fade illusion below */
+  box-shadow: 0 8px 12px 5px #1e1e1e;
+  color: #fff; /* make text visible */
+  text-align: center;
+}
+
+.url-item-row {
+  display: flex;
+  justify-content: flex-start; /* let text start from left */
+  align-items: flex-start; /* keep button top-aligned */
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 8px 4px rgba(0, 0, 0, 0.2);
+  flex-wrap: nowrap; /* keep delete button on the right */
+  position: relative; /* for absolute button positioning */
+  background-color: #1e1e1e;
+  text-align: left;
+}
+
+.url-item-row:hover {
+  transform: scale(1.002);
+  box-shadow: 0 8.1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.url-text {
+  flex: 1; /* take remaining space */
+  min-width: 0; /* important to allow shrinking */
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  padding-right: 80px; /* reserve space for delete button */
+}
+
+.confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.confirm-box {
+  background: #000;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+
+.confirm-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.confirm-yes {
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.confirm-yes:hover {
+  background: #8d232a;
+  transition: 0.2s ease;
+}
+
+.confirm-cancel {
+  background-color: #ccc;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.confirm-cancel:hover {
+  background: #626262;
+  color: #fff;
+}
+
+.delete-btn {
+  background: #e63946;
+  position: absolute;
+  right: 15px; /* aligns with row padding */
+  top: 10px; /* aligns with row padding */
+  border: none;
+  color: white;
+  font-size: 14px;
+  /* border-radius: 50%; */
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #8d232a;
+}
