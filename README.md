@@ -10,7 +10,7 @@ A simple url shortening web app that is made with React + Vite (frontend) and Ex
 ### How to run
 - git clone or download repository as zip
 - Open VSCode or any other IDE
-- Type this:
+- Type this:<br>
 docker-compose up --build
 - Then open Docker Desktop
 - Enjoy this simple project!
